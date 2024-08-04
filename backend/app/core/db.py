@@ -5,7 +5,14 @@ from app.core.config import settings
 from app.core.graph.skills import managed_skills
 from app.models import Skill, User, UserCreate
 
-engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))
+
+
+db_url = settings.SQLALCHEMY_DATABASE_URI
+
+print(db_url)
+
+engine = create_engine(str(db_url) )
+
 
 
 # make sure all SQLModel models are imported (app.models) before initializing DB
