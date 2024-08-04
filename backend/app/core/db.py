@@ -9,8 +9,6 @@ from app.models import Skill, User, UserCreate
 
 db_url = settings.SQLALCHEMY_DATABASE_URI
 
-print(db_url)
-
 engine = create_engine(str(db_url) )
 
 
